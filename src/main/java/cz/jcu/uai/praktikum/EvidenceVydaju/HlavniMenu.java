@@ -30,7 +30,7 @@ public class HlavniMenu {
 		panel.setLayout(gbl);
 		panel.setBackground(Color.WHITE);
 		
-		textOkno = new JLabel("Vítejte v aplikaci Evidence Výdajů");
+		textOkno = new JLabel("Vítejte v aplikaci Evidence výdajů");
 		textOkno.setFont (new Font("Sefir", Font.BOLD, 18));
 		gbc.gridx = 0;
 		gbc.gridy = 0;
