@@ -59,7 +59,7 @@ public class HlavniMenu {
 		});
 		panel.add(vlozitVydaj);
 		
-		info = new JButton("Informace o aplikaci");
+		info = new JButton("Informace");
 		info.setFont(new Font("Serif",Font.BOLD,18));
 		info.setBackground(new Color(255, 150, 100));
 		info.setFocusPainted(false);
