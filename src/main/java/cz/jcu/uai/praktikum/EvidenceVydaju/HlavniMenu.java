@@ -8,7 +8,7 @@ public class HlavniMenu {
 	JFrame hlavniMenu;
 	JPanel panel;
 	JLabel textOkno, obrazekOkno;
-	JButton vlozitVydaj, info, konec;
+	JButton vlozitVydaj, info, konec, zobrazPrehled;
 	FlowLayout fl = new FlowLayout();
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
@@ -58,6 +58,25 @@ public class HlavniMenu {
 			}
 		});
 		panel.add(vlozitVydaj);
+		
+		zobrazPrehled = new JButton("Zobrazit výdaje");
+		zobrazPrehled.setFont(new Font("Serif",Font.BOLD,22));
+		zobrazPrehled.setBackground(new Color(255, 150, 100));
+		zobrazPrehled.setFocusPainted(false);
+		zobrazPrehled.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets (10, 10, 10, 10);
+		gbc.gridx = 1;
+		gbc.gridy = 3;
+		gbc.weightx = 1;
+		gbc.gridwidth = 1;
+		gbl.setConstraints(zobrazPrehled, gbc);
+		zobrazPrehled.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent ae) {
+				Prehled zobrazit = new Prehled();
+			}
+		});
+		panel.add(zobrazPrehled);
 		
 		info = new JButton("Informace o aplikaci");
 		info.setFont(new Font("Serif",Font.BOLD,18));
