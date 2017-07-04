@@ -42,7 +42,7 @@ public class HlavniMenu {
 		
 		vlozitVydaj = new JButton ("Vložit výdaje");
 		vlozitVydaj.setFont(new Font("Serif", Font.BOLD, 20));
-		vlozitVydaj.setBackground(new Color(255, 150, 100) );
+		vlozitVydaj.setBackground(new Color(51, 153, 255) );
 		vlozitVydaj.setFocusPainted(false);
 		vlozitVydaj.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 		gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -59,7 +59,7 @@ public class HlavniMenu {
 		});
 		panel.add(vlozitVydaj);
 		
-		info = new JButton("Informace");
+		info = new JButton("Informace o aplikaci");
 		info.setFont(new Font("Serif",Font.BOLD,18));
 		info.setBackground(new Color(255, 150, 100));
 		info.setFocusPainted(false);
@@ -77,9 +77,26 @@ public class HlavniMenu {
 			}
 		});
 		panel.add(info);
+		
+		konec = new JButton("Konec");
+		konec.setFont(new Font("Serif",Font.BOLD,20));
+		konec.setBackground(new Color(255,120,120));
+		konec.setFocusPainted(false);
+		konec.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets (10, 10, 10, 10);
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		gbc.weightx = 1;
+		gbc.gridwidth = 1;
+		gbl.setConstraints(konec, gbc);
+		konec.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent ae) {
+			hlavniMenu.setVisible(false);
+			}	
+		});
+		panel.add(konec);
 
-		
-		
 		hlavniMenu.add(panel);
 		
 	}
