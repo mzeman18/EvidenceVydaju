@@ -2,11 +2,13 @@ package cz.jcu.uai.praktikum.EvidenceVydaju;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class HlavniMenu {
 	JFrame hlavniMenu;
 	JPanel panel;
 	JLabel textOkno, obrazekOkno;
+	JButton vlozitVydaj;
 	FlowLayout fl = new FlowLayout();
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
@@ -37,6 +39,25 @@ public class HlavniMenu {
 		gbc.anchor = (GridBagConstraints.CENTER);
 		gbl.setConstraints(textOkno, gbc);
 		panel.add(textOkno);
+		
+		vlozitVydaj = new JButton ("Vložit výdaje");
+		vlozitVydaj.setFont(new Font("Serif", Font.BOLD, 20));
+		vlozitVydaj.setBackground(new Color(255, 150, 100) );
+		vlozitVydaj.setFocusPainted(false);
+		vlozitVydaj.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets (10, 10, 10, 10);
+		gbc.gridx = 0;
+		gbc.gridy = 3;
+		gbc.weightx = 1;
+		gbc.gridwidth = 1;
+		gbl.setConstraints(vlozitVydaj, gbc);
+		vlozitVydaj.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent ae) {
+				VlozitVydaj vlozitVydaj = new VlozitVydaj();
+			}
+		});
+		panel.add(vlozitVydaj);
 		
 		hlavniMenu.add(panel);
 		
