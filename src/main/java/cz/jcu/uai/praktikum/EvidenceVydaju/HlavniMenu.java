@@ -8,7 +8,7 @@ public class HlavniMenu {
 	JFrame hlavniMenu;
 	JPanel panel;
 	JLabel textOkno, obrazekOkno;
-	JButton vlozitVydaj;
+	JButton vlozitVydaj, info, konec;
 	FlowLayout fl = new FlowLayout();
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
@@ -58,6 +58,27 @@ public class HlavniMenu {
 			}
 		});
 		panel.add(vlozitVydaj);
+		
+		info = new JButton("Informace o aplikaci");
+		info.setFont(new Font("Serif",Font.BOLD,18));
+		info.setBackground(new Color(255, 150, 100));
+		info.setFocusPainted(false);
+		info.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets (10, 10, 10, 10);
+		gbc.gridx = 0;
+		gbc.gridy = 5;
+		gbc.weightx = 1;
+		gbc.gridwidth = 1;
+		gbl.setConstraints(info, gbc);
+		info.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent ae) {
+				JOptionPane.showMessageDialog(info, "Verze 1.0",null,JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
+		panel.add(info);
+
+		
 		
 		hlavniMenu.add(panel);
 		
