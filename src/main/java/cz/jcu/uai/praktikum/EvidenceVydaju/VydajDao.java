@@ -7,4 +7,5 @@ public interface VydajDao {
 	List<Vydaj> findAll();
 	void save(Vydaj vydaj);
 	
+	
 }
