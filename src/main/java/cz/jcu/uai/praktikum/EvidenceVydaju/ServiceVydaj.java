@@ -1,18 +1,8 @@
 package cz.jcu.uai.praktikum.EvidenceVydaju;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
+import java.util.logging.*;
 
 import javax.swing.JOptionPane;
 
