@@ -60,8 +60,8 @@ public class HlavniMenu {
 		panel.add(vlozitVydaj);
 		
 		zobrazPrehled = new JButton("Zobrazit výdaje");
-		zobrazPrehled.setFont(new Font("Serif",Font.BOLD,22));
-		zobrazPrehled.setBackground(new Color(255, 150, 100));
+		zobrazPrehled.setFont(new Font("Serif",Font.BOLD,20));
+		zobrazPrehled.setBackground(new Color(51, 153, 255));
 		zobrazPrehled.setFocusPainted(false);
 		zobrazPrehled.setBorder(BorderFactory.createLineBorder(Color.BLACK,2));
 		gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -80,7 +80,7 @@ public class HlavniMenu {
 		
 		info = new JButton("Informace o aplikaci");
 		info.setFont(new Font("Serif",Font.BOLD,18));
-		info.setBackground(new Color(255, 150, 100));
+		info.setBackground(new Color(51, 153, 255));
 		info.setFocusPainted(false);
 		info.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 		gbc.fill = GridBagConstraints.HORIZONTAL;
