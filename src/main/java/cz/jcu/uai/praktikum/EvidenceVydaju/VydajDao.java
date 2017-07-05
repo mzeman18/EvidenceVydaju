@@ -5,7 +5,7 @@ import java.util.List;
 public interface VydajDao {
 
 	List<Vydaj> findAll();
-	void save(Vydaj vydaj);
+	void saveVydaj(Vydaj vydaj);
 	
 	
 }
