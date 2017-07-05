@@ -54,7 +54,7 @@ public class HlavniMenu {
 		gbl.setConstraints(vlozitVydaj, gbc);
 		vlozitVydaj.addActionListener(new ActionListener() {
 			public void actionPerformed (ActionEvent ae) {
-				VlozitVydaj vlozitVydaj = new VlozitVydaj();
+				Vydaj vlozitVydaj = new Vydaj();
 			}
 		});
 		panel.add(vlozitVydaj);
